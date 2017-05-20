@@ -11,8 +11,10 @@ use constant {
 use AnyEvent::HTTP;
 use JSON::XS;
 
+use utf8;
+
 our $VERSION = '0.01';
-our $JSON = JSON::XS->new->utf8;
+our $JSON = JSON::XS->new;
 our $AUTOLOAD;
 
 sub new {
